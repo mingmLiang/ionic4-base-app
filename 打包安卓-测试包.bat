@@ -1,2 +1,4 @@
 @echo off
-ionic cordova build android --prod
+cmd /k "ionic cordova build android --prod"
+pause
+cls

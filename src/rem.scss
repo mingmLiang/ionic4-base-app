@@ -1,0 +1,10 @@
+// 页面适配
+// 根元素大小使用 vw 单位
+$vm_fontsize: 32; // 为设计图宽度的时候，html的fontSize值.由于ionic4组件的1rem为16，为了让iphone7屏幕，font-size为16px，所以取2*16
+$vm_design: 750; // 根据需要替换成设计稿的值
+
+@function rem($px) {
+  @return ($px / $vm_fontsize) * 1rem;
+}
+
+

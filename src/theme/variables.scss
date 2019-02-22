@@ -74,4 +74,17 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+}
+
+// 页面适配
+@import "~rem.scss";
+html {
+  font-size: ($vm_fontsize / $vm_design) * 100vw; // 同时，通过Media Queries 限制根元素最大最小值
+  @media screen and (max-width: 320px) {
+    font-size: 14px; // 320*$vm_fontsize/$vm_design ~ 13.65
+  }
+  @media screen and (min-width: $vm_design+'px') {
+    font-size: 32px; //$vm_fontsize
+  }
 }
