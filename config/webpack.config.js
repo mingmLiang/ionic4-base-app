@@ -13,7 +13,7 @@ useDefaultConfig[env].resolve.alias = {
   "@assets": path.resolve('./src/assets/'),
   "@env": path.resolve(environmentPath(env)),
   "@pages": path.resolve('./src/pages/'),
-  "@services": path.resolve('./src/services/'),
+  "@shared": path.resolve('./src/shared/'),
   "@tests": path.resolve('./src/'),    
   "@theme": path.resolve('./src/theme/')
 };
