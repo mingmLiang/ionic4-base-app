@@ -1,6 +1,14 @@
 # ionic-base-app
 ## 项目介绍
-该项目可以作为你的项目架构，进行你的项目开发。它拥有rem的布局方式、根据environments进行打包、http拦截器、以及新建使用路由懒加载page、ionic的UI组件使用范例、ionic中Packaging Native 的使用、以及打包发布安卓安装包。至于发布ios到app store，可能后续会用虚拟机搭建mac系统进行说明
+该项目可以作为你的项目架构，进行你的项目开发。它拥有
+- rem的布局方式
+- 根据environments进行打包
+- http拦截器
+- 以及新建使用路由懒加载page
+- ionic的UI组件使用范例
+- ionic中Packaging Native 的使用
+- 以及打包发布安卓安装包。
+- 至于发布ios到app store，可能后续会用虚拟机搭建mac系统进行说明
 
 该项目正在开发中，具体开发计划请查阅 任务计划.xlsx
 ## 技术架构
