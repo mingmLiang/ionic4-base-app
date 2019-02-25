@@ -20,16 +20,17 @@
     "types": [
       "jasmine"
     ],
-    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "baseUrl": "src",
     "paths": {
-      "@app/*": [ "app/*" ],
-      "@assets/*": [ "assets/*" ],
-      "@env": [ "environments/environment" ],
-      "@pages/*": [ "pages/*" ],
-      "@services/*": [ "services/*" ],
-      "@tests/*": [ "./*" ],
-      "@theme/*": [ "theme/*" ]
-    }
+      "@app/*": ["app/*"],
+      "@assets/*": ["assets/*"],
+      "@env": ["environments/environment"],
+      "@pages/*": ["pages/*"],
+      "@services/*": ["services/*"],
+      "@tests/*": ["./*"],
+      "@theme/*": ["theme/*"]
+    },
   },
   "include": [
     "src/**/*.ts"

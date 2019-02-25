@@ -5,7 +5,7 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve  -w ./config/webpack.config.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -63,6 +63,9 @@
     "ts-node": "~8.0.0",
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
+  },
+  "config": {
+    "ionic_webpack": "./config/webpack.config.js"
   },
   "description": "An Ionic project",
   "cordova": {
