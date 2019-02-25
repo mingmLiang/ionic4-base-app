@@ -12,10 +12,11 @@ const serverUrl = {
   profile: 'http://120.24.80.15:8081/rest/profile/',
   parking: 'http://120.24.80.15:8081/rest/parking/',
   serverSocket: 'http://120.24.80.15:8081/',
-  portal: 'http://120.24.80.15:8081/portal/',
+  portal: 'http://api.shujuzhihui.cn/api/',
   pano: 'http://120.24.80.15:8081/'
 };
-export { environment, serverUrl };
+const appKey = 'a5f3e7d58fdc403ba2936b6195506cb7';
+export { environment, serverUrl, appKey };
 
 /*
  * For easier debugging in development mode, you can import the following file
