@@ -92,3 +92,16 @@ html {
     font-size:rem(20);
 }
 ```
+
+### 搭建tab框架
+https://ionicacademy.com/ionic-routing-navigation/
+- 新建组件
+```
+ionic g page pages/tabs
+ionic g page pages/user
+ionic g page pages/collect
+```
+
+```
+ionic g module pages/tabs/tabs.router --flat
+```
