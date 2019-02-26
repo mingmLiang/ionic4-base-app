@@ -13,7 +13,7 @@
 
 该项目正在开发中，具体开发计划请查阅 任务计划.xlsx
 ## 技术架构
-- 本项目采用ionic4+Angular6进项开发，使用了数据智汇中的微博的API。后续还会持续跟进官方发布，更新ionic和angular。
+- 本项目采用ionic4+Angular7进项开发，使用了数据智汇中的微博的API。后续还会持续跟进官方发布，更新ionic和angular。
 ## 项目结构说明
 ```
 ionic-base-app/  
@@ -57,5 +57,38 @@ ionic-base-app/
 - R1.0.0    业务开发分支
 
 ## 部分技术实现讲解
-- rem的布局
-  待续
+### rem的布局
+**该方法没有使用js，单纯使用scss就实现了rem布局。好处是当ionic的根的font-size改变的时候，只需要改变$vm_fontsize为该值的两倍即可。维护性高，不需要担心ionic的UI组件变形。**
+- rem.scss (配置)
+```
+// 页面适配
+// 根元素大小使用 vw 单位
+$vm_fontsize: 32; // 为设计图宽度的时候，html的fontSize值.由于ionic4组件的1rem为16，为了让iphone7屏幕，font-size为16px，所以取2*16
+$vm_design: 750; // 根据需要替换成设计稿的值
+
+@function rem($px) {
+  @return ($px / $vm_fontsize) * 1rem;
+}
+```
+- 在variables.scss添加
+```
+// 页面适配
+@import "~rem.scss";
+html {
+  font-size: ($vm_fontsize / $vm_design) * 100vw; // 同时，通过Media Queries 限制根元素最大最小值
+  @media screen and (max-width: 320px) {
+    font-size: 14px; // 320*$vm_fontsize/$vm_design ~ 13.65
+  }
+  @media screen and (min-width: $vm_design+'px') {
+    font-size: 32px; //$vm_fontsize
+  }
+}
+```
+- 在组建中编写scss
+引入rem.scss，当设计图中font-size值为20px的时候。
+```
+@import "~rem.scss";
+.iconfont{
+    font-size:rem(20);
+}
+```
