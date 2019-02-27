@@ -5,9 +5,13 @@
 - rem的布局方式
 - 根据environments进行打包
 - http拦截器
-- 以及新建使用路由懒加载page
+- 异常返回的统一处理
+- 全局loading动画
+- 以及新建使用路由懒加载page（tabs切换方式、以及nav跳转方式）
 - ionic的UI组件使用范例
-- ionic中Packaging Native 的使用
+- ionic中Packaging Native 的使用（调取相机拍摄、获取版本号）
+- 使用响应式表单
+- 创建自定义组件库例子（自定义单选，应用于响应式表单的元素）
 - 以及打包发布安卓安装包。
 - 至于发布ios到app store，可能后续会用虚拟机搭建mac系统进行说明
 
