@@ -28,6 +28,7 @@
       "@env": ["environments/environment"],
       "@pages/*": ["pages/*"],
       "@services/*": ["services/*"],
+      "@shared/*": ["shared/*"],
       "@tests/*": ["./*"],
       "@theme/*": ["theme/*"]
     },
