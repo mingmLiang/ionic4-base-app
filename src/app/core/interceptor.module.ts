@@ -17,6 +17,8 @@ import { mergeMap, catchError } from 'rxjs/operators';
 import { ToastController } from '@ionic/angular';
 
 import { LoadingService } from '@shared/loading/loading.service';
+declare const require: any;
+const _ = require('lodash');
 
 @Injectable()
 export class InterceptorModule implements HttpInterceptor {
@@ -43,8 +45,11 @@ export class InterceptorModule implements HttpInterceptor {
                     this.loading.dismiss();
                 }
                 if (event instanceof HttpResponse && event.status === 200) {
-                    if (event.body && (event.body.status === 700 || event.body.status === 800 || event.body.status === 500)) {
-                        return of(event.body.message);
+                    if (event.body && (event.body.ERRORCODE !== '0')) {
+                        this.presentToast(event.body.RESULT);
+                        const eventCopy = _.clone(event);
+                        eventCopy.event.body.RESULT = [];
+                        return of(eventCopy);
                     }
                     return of(event);
                 }
