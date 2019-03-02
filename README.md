@@ -4,7 +4,7 @@
 *可点击跳转*
 
 ###### <a id="catalogue">目录</a>
--<a href="#introduce">项目介绍</a>
+- <a href="#introduce">项目介绍</a>
 - <a href="#technology">技术架构</a>
 - <a href="#structure">项目结构说明</a>
 - <a href="#branch">开发分支</a>
@@ -213,9 +213,12 @@ ionic g page pages/collect
 ```
 - <a href="#catalogue">目录
 
-###  <a id="tab">搭建tab框架</a>
+###  <a id="tab">搭建tab框架（懒加载的方式）</a>
 https://ionicacademy.com/ionic-routing-navigation/
 
+- 相关文件
+
+ionic-reader-app\src\app\pages\tabs
 - <a href="#catalogue">目录
 
 ###  <a id="dictionary">数字字典</a>
@@ -283,3 +286,10 @@ import { SahredModule } from '@shared/shared.module';
 
 - <a href="#catalogue">目录
 
+
+
+
+
+
+
+ 
