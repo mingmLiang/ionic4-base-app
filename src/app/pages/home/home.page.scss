@@ -1,4 +1,44 @@
 @import "~rem.scss";
-.iconfont{
-    font-size:rem(20);
+
+.iconfont {
+    font-size: rem(20);
+}
+
+ul {
+    color: #333;
+
+    li {
+        display: inline-block;
+        padding: rem(24);
+        font-size: rem(24);
+    }
+}
+
+ion-item {
+    padding: rem(24) 0;
+
+    ion-label {
+        white-space: unset;
+        margin: 0;
+
+        p {
+            font-size: rem(22);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    }
+
+    .img-box {
+        width: rem(160);
+        height: rem(140);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
 }

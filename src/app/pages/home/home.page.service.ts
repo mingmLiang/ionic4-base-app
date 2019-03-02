@@ -6,14 +6,20 @@ import { serverUrl, appKey } from '@env';
 @Injectable()
 export class HomePageService {
   constructor(private http: HttpClient) { }
+
+  test(): Observable<{}> {
   httpOptions = {
     headers: new HttpHeaders({ 'is-loading': 'false' })
   };
-  getType(): Observable<{}> {
-    // const url = `${serverUrl.portal}weibo/type`;
     const url = `${serverUrl.portal}weiboyuiuy/type`;
     return this.http.get(
       `${url}?appKey=${appKey}`, this.httpOptions
+    );
+  }
+  getType(): Observable<{}> {
+    const url = `${serverUrl.portal}weibo/type`;
+    return this.http.get(
+      `${url}?appKey=${appKey}`
     );
   }
 

@@ -1,30 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ConstantService } from '@shared/constants/constants.service';
 import { HomePageService } from './home.page.service';
 
-// import { Tab1 } from './tab1-page';
-// import { Tab2 } from './tab2-page';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  providers: [HomePageService]
+  providers: [HomePageService, ConstantService]
 })
 export class HomePage implements OnInit {
-  tab1: any;
-  tab2: any;
-
-  constructor(private homePageService: HomePageService) {
-    // this.tab1 = Tab1;
-    // this.tab2 = Tab2;
+  dataList;
+  typeArrList;
+  TypeArr = this.constantService.getSupprotingData('TypeArr'); // 获取数据字典数据
+  constructor(private homePageService: HomePageService, private constantService: ConstantService) {
   }
 
   ngOnInit(): void {
+    console.log(this.constantService.getSupprotingData('TypeArr'));
+    // 测试请求失败，弹出提示，以及该请求不使用动画效果loading
+    this.homePageService.test().subscribe((data) => {
+      console.log(data['RESULT']);
+    });
+
     this.homePageService.getType().subscribe((data) => {
-      console.log(data);
+      this.typeArrList = data['RESULT'];
+      if (this.typeArrList.length) {
+        this.homePageService.getList(this.typeArrList[0]).subscribe((data) => {
+          this.dataList = data['RESULT'];
+          console.log(data['RESULT']);
+        });
+      }
     });
-    this.homePageService.getList('gaoxiao').subscribe((data) => {
-      console.log(data);
-    });
+
+
   }
 }
