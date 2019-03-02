@@ -1,7 +1,11 @@
 # ionic-base-app
 如有疑问，欢迎联系本姐姐（QQ：2324607198）.请发邮件，描述你的问题（截图+文字描述）。
 
-该文档链接已放在有道云笔记   http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
+该文档链接已放在有道云笔记  
+
+http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
+
+
 *可点击跳转*
 
 ###### <a id="catalogue">目录</a>
