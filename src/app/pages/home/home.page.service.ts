@@ -16,6 +16,11 @@ export class HomePageService {
       `${url}?appKey=${appKey}`, this.httpOptions
     );
   }
+    const url = `${serverUrl.portal}weibo/type`;
+    return this.http.get(
+      `${url}?appKey=${appKey}`
+    );
+  }
   getType(): Observable<{}> {
     const url = `${serverUrl.portal}weibo/type`;
     return this.http.get(
