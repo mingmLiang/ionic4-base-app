@@ -1,13 +1,36 @@
 # ionic-base-app
 如有疑问，欢迎联系本姐姐（QQ：2324607198）.请发邮件，描述你的问题（截图+文字描述）。
-## 项目介绍
+
+*可点击跳转*
+
+###### <a id="catalogue">目录</a>
+- <a href="#introduce">项目介绍</a>
+- <a href="#technology">技术架构</a>
+- <a href="#structure">项目结构说明</a>
+- <a href="#branch">开发分支</a>
+- <a href="#use">实现过程和使用方法</a>
+- <a href="#use">实现过程和使用方法</a>
+- - <a href="#interceptor">http interceptor（异常返回的统一处理、塞公共header）</a>
+- - <a href="#aliases">路径昵称（aliases）</a>
+- - <a href="#environments">关于environments</a>
+- - <a href="#httpConst">http请求地址前缀的公共变量</a>
+- - <a href="#rem">rem的布局</a>
+- - <a href="#loading">全局loading</a>
+- - <a href="#page">新建组件</a>
+- - <a href="#tab">搭建tab框架</a>
+- - <a href="#dictionary">数字字典</a>
+- - <a href="#pipe">过滤器pipe</a>
+
+
+##  <a id="introduce">项目介绍</a>
 该项目可以作为你的项目架构，进行你的项目开发。它拥有
 - rem的布局方式
 - 根据environments进行打包
-- http拦截器
-- 异常返回的统一处理
-- 全局loading动画
+- 路径昵称（aliases）
+- http拦截器（异常返回的统一处理、全局loading）
 - 以及新建使用路由懒加载page（tabs切换方式、以及nav跳转方式）
+- 数字字典
+- 过滤器pipe
 - ionic的UI组件使用范例
 - ionic中Packaging Native 的使用（调取相机拍摄、获取版本号）
 - 使用响应式表单
@@ -16,9 +39,13 @@
 - 至于发布ios到app store，可能后续会用虚拟机搭建mac系统进行说明
 
 该项目正在开发中，具体开发计划请查阅 任务计划.xlsx
-## 技术架构
+
+##  <a id="technology">技术架构</a>
 - 本项目采用ionic4+Angular7进项开发，使用了数据智汇中的微博的API。后续还会持续跟进官方发布，更新ionic和angular。
-## 项目结构说明
+
+- <a href="#catalogue">目录
+
+##  <a id="structure">项目结构说明</a>
 ```
 ionic-base-app/  
 |– config/  
@@ -55,13 +82,82 @@ ionic-base-app/
 |– index.html
 ```
 
-## 开发分支
+- <a href="#catalogue">目录
+
+##  <a id="branch">开发分支</a>
 - master分支   为主分支
 - floor分支    该分支主要用于搭建项目的基础架构
 - R1.0.0    业务开发分支
+- <a href="#catalogue">目录
 
-## 部分技术实现讲解
-### rem的布局
+##  <a id="use">实现过程和使用方法</a>
+
+###  <a id="interceptor">http interceptor（异常返回的统一处理、塞公共header）</a>
+- 相关文件
+ionic-reader-app\src\app\core\interceptor.module.ts
+- <a href="#catalogue">目录
+
+###  <a id="environments">关于environments</a>
+- 相关文件
+
+ionic-reader-app\src\environments
+
+ionic-reader-app\angular.json
+
+- 如何使用
+
+默认引用ionic-reader-app\src\environments\environment.ts
+
+使用以下命令则引用environment.prod.ts
+```
+ionic build --prod
+```
+- <a href="#catalogue">目录
+
+###  <a id="aliases">路径昵称（aliases）</a>
+- 相关文件
+
+ionic-reader-app\config\webpack.config.js
+
+ionic-reader-app\tsconfig.json
+
+- 使用方法
+
+在.ts中，将原来的相对路径，可以替换为@...,例如
+```
+import { serverUrl, appKey } from '../../../environments/environment';
+
+替换为
+import { serverUrl, appKey } from '@env';
+
+```
+
+- <a href="#catalogue">目录
+
+
+###  <a id="httpConst">http请求地址前缀的公共变量</a>
+- 添加位置
+
+ionic-reader-app\src\environment
+
+- 如何使用
+
+引入
+```
+import { serverUrl, appKey } from '@env';
+```
+使用
+```
+getType(): Observable < {} > {
+  const url = `${serverUrl.portal}weibo/type`;
+  return this.http.get(
+    `${url}?appKey=${appKey}`
+  );
+}
+```
+- <a href="#catalogue">目录
+
+### <a id="rem">rem的布局</a>
 **该方法没有使用js，单纯使用scss就实现了rem布局。好处是当ionic的根的font-size改变的时候，只需要改变$vm_fontsize为该值的两倍即可。维护性高，不需要担心ionic的UI组件变形。**
 - rem.scss (配置)
 ```
@@ -96,16 +192,94 @@ html {
     font-size:rem(20);
 }
 ```
+- <a href="#catalogue">目录
+###  <a id="loading">全局loading</a>
+- 相关文件
 
-### 搭建tab框架
-https://ionicacademy.com/ionic-routing-navigation/
-- 新建组件
+ionic-reader-app\src\app\core\interceptor.module.ts
+
+ionic-reader-app\src\shared\loading\loading.service.ts
+
+
+封装了一个LoadingService类，达到全局loading只能显示一个的目的
+
+- <a href="#catalogue">目录
+
+### <a id="page">新建组件</a> 
 ```
 ionic g page pages/tabs
 ionic g page pages/user
 ionic g page pages/collect
 ```
+- <a href="#catalogue">目录
+
+###  <a id="tab">搭建tab框架</a>
+https://ionicacademy.com/ionic-routing-navigation/
+
+- <a href="#catalogue">目录
+
+###  <a id="dictionary">数字字典</a>
+
+- 相关文件
+ionic-reader-app\src\shared\constants\supporting-data.constants.ts
+
+ionic-reader-app\src\shared\constants\constants.service.ts
+
+
+ionic-reader-app\src\shared\shared.module.ts
+
+- 使用方法
+
+在.page.ts中，引入并且注入ConstantService，就可以使用
+```
+import { Component } from '@angular/core';
+
+import { ConstantService } from '@shared/constants/constants.service';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+  providers: [ConstantService]
+})
+export class HomePage  {
+  TypeArr = this.constantService.getSupprotingData('TypeArr'); // 获取数据字典数据
+  constructor(private constantService: ConstantService) {
+  }
+}
 
 ```
-ionic g module pages/tabs/tabs.router --flat
+- <a href="#catalogue">目录
+
+
+
+###  <a id="pipe">过滤器pipe</a>
+- 相关文件
+
+ionic-reader-app\src\shared\pipe
+
+- 使用方法
+
+在module.ts中，引入SahredModule
 ```
+import { SahredModule } from '@shared/shared.module';
+
+
+@NgModule({
+  imports: [
+    SahredModule
+  ]
+})
+```
+
+在html中使用，
+```
+<ul class="title">
+    <li *ngFor="let item of typeArrList">
+      {{item|filterData:TypeArr}}
+    </li>
+  </ul>
+```
+
+- <a href="#catalogue">目录
+
