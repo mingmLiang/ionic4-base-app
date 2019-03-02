@@ -6,34 +6,29 @@ import { serverUrl, appKey } from '@env';
 @Injectable()
 export class HomePageService {
   constructor(private http: HttpClient) { }
-
-  test(): Observable<{}> {
   httpOptions = {
     headers: new HttpHeaders({ 'is-loading': 'false' })
   };
+  test(): Observable<{}> {
+
     const url = `${serverUrl.portal}weiboyuiuy/type`;
     return this.http.get(
       `${url}?appKey=${appKey}`, this.httpOptions
     );
   }
-    const url = `${serverUrl.portal}weibo/type`;
-    return this.http.get(
-      `${url}?appKey=${appKey}`
-    );
-  }
-  getType(): Observable<{}> {
-    const url = `${serverUrl.portal}weibo/type`;
-    return this.http.get(
-      `${url}?appKey=${appKey}`
-    );
-  }
+getType(): Observable < {} > {
+  const url = `${serverUrl.portal}weibo/type`;
+  return this.http.get(
+    `${url}?appKey=${appKey}`
+  );
+}
 
-  //   return this.http.post(url, params, this.httpOptions);
+//   return this.http.post(url, params, this.httpOptions);
 
-  getList(queryType: string): Observable<{}> {
-    const url = `${serverUrl.portal}weibo/list`;
-    return this.http.get(
-      `${url}?appKey=${appKey}&queryType=${queryType}`
-    );
-  }
+getList(queryType: string): Observable < {} > {
+  const url = `${serverUrl.portal}weibo/list`;
+  return this.http.get(
+    `${url}?appKey=${appKey}&queryType=${queryType}`
+  );
+}
 }

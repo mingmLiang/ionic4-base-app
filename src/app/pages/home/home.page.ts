@@ -26,9 +26,9 @@ export class HomePage implements OnInit {
     this.homePageService.getType().subscribe((data) => {
       this.typeArrList = data['RESULT'];
       if (this.typeArrList.length) {
-        this.homePageService.getList(this.typeArrList[0]).subscribe((data) => {
-          this.dataList = data['RESULT'];
-          console.log(data['RESULT']);
+        this.homePageService.getList(this.typeArrList[0]).subscribe((dataList) => {
+          this.dataList = dataList['RESULT'];
+          console.log(dataList['RESULT']);
         });
       }
     });
