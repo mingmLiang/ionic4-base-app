@@ -1,6 +1,7 @@
 # ionic-base-app
 如有疑问，欢迎联系本姐姐（QQ：2324607198）.请发邮件，描述你的问题（截图+文字描述）。
 
+该文档链接已放在有道云笔记   http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
 *可点击跳转*
 
 ###### <a id="catalogue">目录</a>
@@ -17,7 +18,7 @@
 - - <a href="#rem">rem的布局</a>
 - - <a href="#loading">全局loading</a>
 - - <a href="#page">新建组件</a>
-- - <a href="#tab">搭建tab框架</a>
+- - <a href="#tab">搭建tab框架（懒加载的方式）</a>
 - - <a href="#dictionary">数字字典</a>
 - - <a href="#pipe">过滤器pipe</a>
 
@@ -224,6 +225,7 @@ ionic-reader-app\src\app\pages\tabs
 ###  <a id="dictionary">数字字典</a>
 
 - 相关文件
+
 ionic-reader-app\src\shared\constants\supporting-data.constants.ts
 
 ionic-reader-app\src\shared\constants\constants.service.ts
