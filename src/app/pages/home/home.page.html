@@ -5,5 +5,17 @@
 </ion-header>
 
 <ion-content>
-dsadsa
+  <ul class="title">
+    <li *ngFor="let item of typeArrList">
+      {{item|filterData:TypeArr}}
+    </li>
+  </ul>
+  <ion-list>
+    <ion-item *ngFor="let item of dataList">
+      <ion-label><p>{{item["title"]}}</p></ion-label>
+      <div class="img-box" slot="start">
+        <img src="{{item['img_list'][0]}}" alt="">
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
