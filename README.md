@@ -14,7 +14,6 @@ http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
 - <a href="#structure">项目结构说明</a>
 - <a href="#branch">开发分支</a>
 - <a href="#use">实现过程和使用方法</a>
-- <a href="#use">实现过程和使用方法</a>
 - - <a href="#interceptor">http interceptor（异常返回的统一处理、塞公共header）</a>
 - - <a href="#aliases">路径昵称（aliases）</a>
 - - <a href="#environments">关于environments</a>
