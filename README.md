@@ -4,7 +4,7 @@
 *可点击跳转*
 
 ###### <a id="catalogue">目录</a>
-- <a href="#introduce">项目介绍</a>
+-<a href="#introduce">项目介绍</a>
 - <a href="#technology">技术架构</a>
 - <a href="#structure">项目结构说明</a>
 - <a href="#branch">开发分支</a>
