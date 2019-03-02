@@ -25,7 +25,7 @@ http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
 - - <a href="#tab">搭建tab框架（懒加载的方式）</a>
 - - <a href="#dictionary">数字字典</a>
 - - <a href="#pipe">过滤器pipe</a>
-
+- - <a href="#lodash">如何使用lodash</a>
 
 ##  <a id="introduce">项目介绍</a>
 该项目可以作为你的项目架构，进行你的项目开发。它拥有
@@ -293,6 +293,22 @@ import { SahredModule } from '@shared/shared.module';
 - <a href="#catalogue">目录
 
 
+
+### <a id="lodash">如何使用lodash</a> 
+- lodash官网 https://lodash.com/
+- 在项目中的使用，
+
+引入
+```
+declare const require: any;
+const _ = require('lodash');
+```
+
+使用
+```
+const eventCopy = _.clone(event);
+```
+- <a href="#catalogue">目录
 
 
 
