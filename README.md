@@ -9,6 +9,7 @@ http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
 *可点击跳转*
 
 ###### <a id="catalogue">目录</a>
+- <a href="#development">关于移动端开发使用rem需要注意的事情</a>
 - <a href="#introduce">项目介绍</a>
 - <a href="#technology">技术架构</a>
 - <a href="#structure">项目结构说明</a>
@@ -25,6 +26,11 @@ http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
 - - <a href="#dictionary">数字字典</a>
 - - <a href="#pipe">过滤器pipe</a>
 - - <a href="#lodash">如何使用lodash</a>
+
+## <a id="development">关于移动端开发使用rem需要注意的事情</a>
+之前我写ionic的项目，老发现用rem设置字体大小，在真机都会比设计图小一像素。
+原则上是，rem 用于布局，px 用于字体，配合 flex 或媒体查询做布局切换。
+https://www.zhihu.com/question/39629259
 
 ##  <a id="introduce">项目介绍</a>
 该项目可以作为你的项目架构，进行你的项目开发。它拥有
