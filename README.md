@@ -34,6 +34,8 @@ http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
 https://www.zhihu.com/question/39629259
 - 手机屏幕尺寸大全
 https://www.ubuuk.com/screen
+- 流量研究院(当前的流行的手机型号、分辨率、系统)
+https://mtj.baidu.com/data/mobile/device/
 ##  <a id="introduce">项目介绍</a>
 该项目可以作为你的项目架构，进行你的项目开发。它拥有
 - rem的布局方式
