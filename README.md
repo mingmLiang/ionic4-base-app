@@ -320,7 +320,19 @@ const eventCopy = _.clone(event);
 - <a href="#catalogue">目录
 
 
-
+### <a id="lodash">安卓打包</a> 
+- 真机调试
+ 1》 使用安卓手机，连接数据线。打开开发者模式、USB调试。
+ 2》根目录下面执行以下代码
+ ```
+ cordova run android
+ ```
+ - 打包安卓测试包
+ ```
+ ionic cordova build android --prod
+ ```
+ - 打包正式包并发布
+ 1》
 
 
  
