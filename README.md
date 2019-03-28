@@ -355,6 +355,9 @@ jarsigner -verbose -keystore my-release-key.keystore -signedjar signed.apk andro
 
 ### <a id="tools">一些好用的工具</a> 
 1》 开发工具 Visual Studio Code
+
 2》MT管理器  可以查看打包后的代码 文件管理工具和APK逆向修改神器 （安卓）
+
 3》XCode  ios打包工具
+
 4》Simular
