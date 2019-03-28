@@ -307,6 +307,7 @@ import { SahredModule } from '@shared/shared.module';
 ### <a id="icons">添加自定义icons</a> 
 https://github.com/ionic-team/ionicons/issues/589
 - 添加文件(可以在 https://www.iconfont.cn 下载svg)
+
 src\assets\custom-ion-icons\ios-back.svg
 
 src\assets\custom-ion-icons\md-back.svg
@@ -339,7 +340,7 @@ const eventCopy = _.clone(event);
  1》 使用安卓手机，连接数据线。打开USB调试。
  2》根目录下面执行以下代码
  ```
- cordova run android
+ionic cordova run android
  ```
  - 使用谷歌找bug
  1》打开google chrome浏览器，输入
