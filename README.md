@@ -304,7 +304,19 @@ import { SahredModule } from '@shared/shared.module';
 - <a href="#catalogue">目录
 
 
-
+ionic 4 custom icons
+### <a id="icons">添加自定义icons</a> 
+https://github.com/ionic-team/ionicons/issues/589
+- 添加文件
+src\assets\custom-ion-icons\ios-back.svg
+src\assets\custom-ion-icons\md-back.svg
+- 使用
+```
+      <ion-back-button [text]="'返回'" [icon]="'back'" defaultHref="tabs/home">
+      </ion-back-button>
+      
+      <ion-icon name="newicon"></ion-icon>
+```
 ### <a id="lodash">如何使用lodash</a> 
 - lodash官网 https://lodash.com/
 - 在项目中的使用，
