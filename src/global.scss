@@ -9,3 +9,33 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+ion-toolbar {
+    --background: #f10505;
+    --color: #fff;
+    text-align: center;
+    ion-buttons {
+        position: absolute;
+        top:50%;
+        margin-top: -16px;
+    }
+}
+ion-title,
+.toolbar-title {
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ion-icon {
+    font-size: 16px;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}

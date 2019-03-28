@@ -176,7 +176,7 @@ getType(): Observable < {} > {
 
 ### <a id="rem">rem的布局</a>
 **该方法没有使用js，单纯使用scss就实现了rem布局。好处是当ionic的根的font-size改变的时候，只需要改变$vm_fontsize为该值的两倍即可。维护性高，不需要担心ionic的UI组件变形。**
-- rem.scss (配置)
+- variable.scss (配置)
 ```
 // 页面适配
 // 根元素大小使用 vw 单位
@@ -190,7 +190,7 @@ $vm_design: 750; // 根据需要替换成设计稿的值
 - 在variables.scss添加
 ```
 // 页面适配
-@import "~rem.scss";
+@import "~variable.scss";
 html {
   font-size: ($vm_fontsize / $vm_design) * 100vw; // 同时，通过Media Queries 限制根元素最大最小值
   @media screen and (max-width: 320px) {
@@ -202,9 +202,9 @@ html {
 }
 ```
 - 在组建中编写scss
-引入rem.scss，当设计图中font-size值为20px的时候。
+引入variable.scss，当设计图中font-size值为20px的时候。
 ```
-@import "~rem.scss";
+@import "~variable.scss";
 .iconfont{
     font-size:rem(20);
 }

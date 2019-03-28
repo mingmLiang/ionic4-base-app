@@ -1,0 +1,18 @@
+@import "~variable.scss";
+
+ion-icon {
+    font-size: 20px;
+}
+
+ion-label,
+ion-icon {
+    color: #666;
+}
+
+.tab-selected {
+    ion-icon,
+    ion-label {
+        color: $themeColor;
+    }
+
+}

@@ -78,7 +78,7 @@
 }
 
 // 页面适配
-@import "~rem.scss";
+@import "~variable.scss";
 html {
   font-size: ($vm_fontsize / $vm_design) * 100vw; // 同时，通过Media Queries 限制根元素最大最小值
   @media screen and (max-width: 320px) {

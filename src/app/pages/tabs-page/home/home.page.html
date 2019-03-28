@@ -5,17 +5,34 @@
 </ion-header>
 
 <ion-content>
-  <ul class="title">
+  <ul class="title" *ngIf="typeArrList&&typeArrList.length">
     <li *ngFor="let item of typeArrList">
       {{item|filterData:TypeArr}}
     </li>
   </ul>
-  <ion-list>
-    <ion-item *ngFor="let item of dataList" href="/article-detail">
-      <ion-label><p>{{item["title"]}}</p></ion-label>
-      <div class="img-box" slot="start">
-        <img src="{{item['img_list'][0]}}" alt="">
-      </div>
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <a href="/article-detail" *ngFor="let item of dataList">
+      <ion-row>
+        <ion-col size="3">
+          <ion-avatar item-start>
+            <img src="{{item['img_list'][0]}}">
+          </ion-avatar>
+        </ion-col>
+        <ion-col size="9">
+          <div class="sub-title">{{item["blogger"]}}<span class="time">{{item["publishTime"]}}</span></div>
+          <div class="text">{{item["title"]}}</div>
+          <ion-row class="heat">
+            <ion-col>
+              <ion-icon name="custom-heart"></ion-icon>
+              {{item["praisedNum"]}}
+            </ion-col>
+            <ion-col>
+              <ion-icon name="custom-share"></ion-icon>
+              {{item["forwardNum"]}}
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </a>
+  </ion-grid>
 </ion-content>
