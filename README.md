@@ -202,9 +202,9 @@ html {
 }
 ```
 - 在组建中编写scss
-引入rem.scss，当设计图中font-size值为20px的时候。
+引入variable.scss，当设计图中font-size值为20px的时候。
 ```
-@import "~rem.scss";
+@import "~variable.scss";
 .iconfont{
     font-size:rem(20);
 }
