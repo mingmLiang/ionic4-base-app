@@ -13,12 +13,10 @@
   <ion-grid>
     <a href="/article-detail" *ngFor="let item of dataList">
       <ion-row>
-        <ion-col size="3">
           <ion-avatar item-start>
             <img src="{{item['img_list'][0]}}">
           </ion-avatar>
-        </ion-col>
-        <ion-col size="9">
+        <ion-col>
           <div class="sub-title">{{item["blogger"]}}<span class="time">{{item["publishTime"]}}</span></div>
           <div class="text">{{item["title"]}}</div>
           <ion-row class="heat">
