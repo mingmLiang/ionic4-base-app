@@ -55,4 +55,7 @@ ul {
 .heat {
     font-size: 12px;
     color: $themeColor;
+    span,ion-icon{
+        vertical-align: middle;
+    }
 }
