@@ -306,7 +306,7 @@ import { SahredModule } from '@shared/shared.module';
 
 ### <a id="icons">添加自定义icons</a> 
 https://github.com/ionic-team/ionicons/issues/589
-- 添加文件
+- 添加文件(可以在 https://www.iconfont.cn 下载svg)
 src\assets\custom-ion-icons\ios-back.svg
 
 src\assets\custom-ion-icons\md-back.svg
