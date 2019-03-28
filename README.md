@@ -308,6 +308,7 @@ import { SahredModule } from '@shared/shared.module';
 https://github.com/ionic-team/ionicons/issues/589
 - 添加文件
 src\assets\custom-ion-icons\ios-back.svg
+
 src\assets\custom-ion-icons\md-back.svg
 - 使用
 ```
