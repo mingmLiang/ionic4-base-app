@@ -11,7 +11,7 @@
     </li>
   </ul>
   <ion-list>
-    <ion-item *ngFor="let item of dataList">
+    <ion-item *ngFor="let item of dataList" href="/article-detail">
       <ion-label><p>{{item["title"]}}</p></ion-label>
       <div class="img-box" slot="start">
         <img src="{{item['img_list'][0]}}" alt="">

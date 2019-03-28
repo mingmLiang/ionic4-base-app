@@ -12,11 +12,11 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../user/user.module#UserPageModule'
+            loadChildren: '../tabs-page/user/user.module#UserPageModule'
           },
           // {
           //   path: ':id',
-          //   loadChildren: '../film-details/film-details.module#FilmDetailsPageModule'
+          //   loadChildren: '../tabs-page/film-details/film-details.module#FilmDetailsPageModule'
           // }
         ]
       },
@@ -25,7 +25,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../home/home.module#HomePageModule'
+            loadChildren: '../tabs-page/home/home.module#HomePageModule'
           }
         ]
       },
@@ -34,7 +34,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../collect/collect.module#CollectPageModule'
+            loadChildren: '../tabs-page/collect/collect.module#CollectPageModule'
           }
         ]
       }
