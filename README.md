@@ -1,12 +1,57 @@
 # ionic-base-app
-## 项目介绍
+如有疑问，欢迎联系（QQ：2324607198）.请发邮件，描述你的问题（截图+文字描述）。
+
+该文档链接已放在有道云笔记  
+
+http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
+
+
+*可点击跳转*
+
+###### <a id="catalogue">目录</a>
+- <a href="#development">关于移动端开发使用rem需要注意的事情</a>
+- <a href="#introduce">项目介绍</a>
+- <a href="#technology">技术架构</a>
+- <a href="#structure">项目结构说明</a>
+- <a href="#branch">开发分支</a>
+- <a href="#use">实现过程和使用方法</a>
+- - <a href="#interceptor">http interceptor（异常返回的统一处理、塞公共header）</a>
+- - <a href="#aliases">路径昵称（aliases）</a>
+- - <a href="#environments">关于environments</a>
+- - <a href="#httpConst">http请求地址前缀的公共变量</a>
+- - <a href="#rem">rem的布局</a>
+- - <a href="#loading">全局loading</a>
+- - <a href="#page">新建组件</a>
+- - <a href="#tab">搭建tab框架（懒加载的方式）</a>
+- - <a href="#dictionary">数字字典</a>
+- - <a href="#pipe">过滤器pipe</a>
+- - <a href="#icons">添加自定义icons</a>
+- - <a href="#lodash">如何使用lodash</a>
+- <a href="#android">安卓调试/打包/发布</a>
+- <a href="#tools">一些好用的工具</a>
+
+## <a id="development">关于移动端开发使用rem需要注意的事情</a>
+
+- 之前我写ionic的项目，老发现用rem设置字体大小，在真机都会比设计图小一像素。
+原则上是，rem 用于布局，px 用于字体，配合 flex 或媒体查询做布局切换。
+https://www.zhihu.com/question/39629259
+- 手机屏幕尺寸大全
+https://www.ubuuk.com/screen
+- 流量研究院(当前的流行的手机型号、分辨率、系统)
+https://mtj.baidu.com/data/mobile/device/
+##  <a id="introduce">项目介绍</a>
 该项目可以作为你的项目架构，进行你的项目开发。它拥有
 - rem的布局方式
 - 根据environments进行打包
-- http拦截器
-- 以及新建使用路由懒加载page
+- 路径昵称（aliases）
+- http拦截器（异常返回的统一处理、全局loading）
+- 以及新建使用路由懒加载page（tabs切换方式、以及nav跳转方式）
+- 数字字典
+- 过滤器pipe
 - ionic的UI组件使用范例
-- ionic中Packaging Native 的使用
+- ionic中Packaging Native 的使用（调取相机拍摄、获取版本号）
+- 使用响应式表单
+- 创建自定义组件库例子（自定义单选，应用于响应式表单的元素）
 - 以及打包发布安卓安装包。
 - 至于发布ios到app store，可能后续会用虚拟机搭建mac系统进行说明
 
