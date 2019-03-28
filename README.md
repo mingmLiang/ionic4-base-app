@@ -25,6 +25,7 @@ http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
 - - <a href="#tab">搭建tab框架（懒加载的方式）</a>
 - - <a href="#dictionary">数字字典</a>
 - - <a href="#pipe">过滤器pipe</a>
+- - <a href="#icons">添加自定义icons</a>
 - - <a href="#lodash">如何使用lodash</a>
 - <a href="#android">安卓调试/打包/发布</a>
 - <a href="#tools">一些好用的工具</a>
@@ -303,8 +304,6 @@ import { SahredModule } from '@shared/shared.module';
 
 - <a href="#catalogue">目录
 
-
-ionic 4 custom icons
 ### <a id="icons">添加自定义icons</a> 
 https://github.com/ionic-team/ionicons/issues/589
 - 添加文件
