@@ -1,5 +1,5 @@
 # ionic-base-app
-如有疑问，欢迎联系本姐姐（QQ：2324607198）.请发邮件，描述你的问题（截图+文字描述）。
+如有疑问，欢迎联系（QQ：2324607198）.请发邮件，描述你的问题（截图+文字描述）。
 
 该文档链接已放在有道云笔记  
 
@@ -360,4 +360,4 @@ jarsigner -verbose -keystore my-release-key.keystore -signedjar signed.apk andro
 
 3》XCode  ios打包工具
 
-4》Simular
+4》Simulator ios模拟器
