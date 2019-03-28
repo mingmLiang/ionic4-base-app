@@ -26,6 +26,8 @@ http://note.youdao.com/noteshare?id=047153a69ef0501a370e713d878a66e7
 - - <a href="#dictionary">数字字典</a>
 - - <a href="#pipe">过滤器pipe</a>
 - - <a href="#lodash">如何使用lodash</a>
+- <a href="#android">安卓调试/打包/发布</a>
+- <a href="#tools">一些好用的工具</a>
 
 ## <a id="development">关于移动端开发使用rem需要注意的事情</a>
 
@@ -320,19 +322,39 @@ const eventCopy = _.clone(event);
 - <a href="#catalogue">目录
 
 
-### <a id="lodash">安卓打包</a> 
+### <a id="android">安卓调试/打包/发布</a> 
 - 真机调试
- 1》 使用安卓手机，连接数据线。打开开发者模式、USB调试。
+ 1》 使用安卓手机，连接数据线。打开USB调试。
  2》根目录下面执行以下代码
  ```
  cordova run android
  ```
+ - 使用谷歌找bug
+ 1》打开google chrome浏览器，输入
+```
+chrome://inspect/#devices
+```
  - 打包安卓测试包
  ```
  ionic cordova build android --prod
  ```
  - 打包正式包并发布
- 1》
-
-
  
+ 1》打包命令
+```
+ionic cordova build android --prod --release
+```
+2》生成签名文件   jdk方式(window)
+```
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000 
+```
+3》jarsigner签名
+```
+jarsigner -verbose -keystore my-release-key.keystore -signedjar signed.apk android-release-unsigned.apk shiyi
+```
+
+### <a id="tools">一些好用的工具</a> 
+1》 开发工具 Visual Studio Code
+2》MT管理器  可以查看打包后的代码 文件管理工具和APK逆向修改神器 （安卓）
+3》XCode  ios打包工具
+4》Simular
