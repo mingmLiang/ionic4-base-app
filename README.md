@@ -339,7 +339,7 @@ const eventCopy = _.clone(event);
  1》 使用安卓手机，连接数据线。打开USB调试。
  2》根目录下面执行以下代码
  ```
- cordova run android
+ionic cordova run android
  ```
  - 使用谷歌找bug
  1》打开google chrome浏览器，输入
