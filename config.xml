@@ -13,7 +13,8 @@
     <allow-intent href="geo:*" />
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#f10505" />
+    <preference name="StatusBarBackgroundColor" value="#fff" />
+    <preference name="StatusBarColor" value="#000" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="BackupWebStorage" value="none" />

@@ -19,6 +19,10 @@ ion-toolbar {
         position: absolute;
         top:50%;
         margin-top: -16px;
+        ion-icon{
+            font-size: 32px;
+            color: #fff;
+        }
     }
 }
 ion-title,
